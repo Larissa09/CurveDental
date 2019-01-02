@@ -1,0 +1,349 @@
+Test Cases to create an appointment and confirm the schedule.
+
+1. To create a new patient and verify that the new patient is added to the patient list1. 
+
+Steps
+1. Navigate to New Patient page 
+2. Enter valid first name
+3. Enter valid last name
+4. Enter valid birth date
+5. Click on Save button
+
+Expected Results
+New patient record must get created  and seen on  all patients page
+User must be directed the patient details page
+
+_________________________________________________________________________________________________
+
+2   To create new patient record with existing  first name
+
+Steps
+1. Navigate to New Patient page
+2. Enter existing first name
+3. Enter valid last name
+4. Enter valid birth date
+5. Click on Save button 
+
+Expected Results
+Patient record must get created
+
+__________________________________________________________________________________________________
+
+3. To create new patient record with existing last name
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Enter existing last name
+4. Enter valid birth date
+5. Click on Save button 
+
+Expected Results
+Patient record must get created
+
+
+_____________________________________________________________________________________________________
+
+4. To create patient record with existing birth date
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Enter valid last name
+4. Enter existing birth date
+5. Click on Save button 
+
+Expected Results
+Patient record must get created
+
+
+__________________________________________________________________________________________________________
+
+5. To create new patient record with existing  first name, last name  and birthdate
+
+Steps
+1. Navigate to New Patient page
+2. Enter existing first name
+3. Enter existing last name
+4. Enter existing birth date
+5. Click on Save button
+
+Steps
+User friendly validation message must be shown indicating record already exists
+_____________________________________________________________________________________________________________
+
+6 To create patient record with future birth date
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Enter valid last name
+4. Enter future birth date
+5. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating invalid birth date
+
+
+_______________________________________________________________________________________________________________
+7 To create patient record with blank first name
+
+Steps
+1. Navigate to New Patient page
+2. Keep first name field blank
+3. Enter valid last name
+4. Enter valid birth date
+5. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating first name is mandatory
+
+
+________________________________________________________________________________________________________________
+8 To create patient record with blank last name
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Keep last name field blank
+4. Enter valid birth date
+5. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating last name is mandatory
+
+__________________________________________________________________________________________________________________
+
+9 To create patient record with blank birth date
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Enter valid last name
+4. Keep birth date blank
+5. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating birth date is mandatory
+
+__________________________________________________________________________________________________________________
+10 To verify that no record is created when Cancel button is clicked
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Enter valid last name
+4. Enter valid birth date
+5. Click on Cancel button
+
+Expected Results
+User must get redirected to patient list Page
+
+___________________________________________________________________________________________________________________
+
+11 To verify that first name field accepts only alphabets
+
+Steps
+1. Navigate to New Patient page
+2. Enter numbers for first name
+3. Enter valid last name
+4. Enter valid birth date
+5. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating first name accepts only alphabets  
+
+_________________________________________________________________________________________________________________
+12 To verify that last name field accepts only alphabets
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Enter numbers for last name
+4. Enter valid birth date
+5. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating last name accepts only alphabets
+
+______________________________________________________________________________________________________________
+13 To verify that birth date field accepts only numbers
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Enter valid last name
+4. Enter alphabets for birth date
+5. Click on Save button
+
+
+Expected Results
+User friendly validation message must be shown indicating birth date accepts only alphabets
+
+__________________________________________________________________________________________________________________
+14 To verify user friendly validation message is shown when invalid date format is added
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Enter valid last name
+4. Enter invalid date for birth date. Eg 2018/2/2 or 2018-2-2
+5. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating birth date accepts date in YYYY-MM-DD format
+
+______________________________________________________________________________________________________________________
+
+15 To verify  user is redirected to patient details page after adding new patient record
+
+Steps
+1. Navigate to New Patient page
+2. Enter valid first name
+3. Enter valid last name
+4. Enter valid birth date
+5. Click on Save button
+
+Expected Results
+1. User must be directed the patient details page
+2. Details seen should match the details entered
+
+_________________________________________________________________________________________________________________________
+16 To verify that schedule appointment page is seen when user clicks on Schedule appointment link
+
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+
+Expected Results
+User must get redirected to appointment create page
+
+_________________________________________________________________________________________________________________________
+
+17 To verify that current date and time are auto-populated
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+3. Check the date and time shown
+
+Expected Results
+Current date and time must get populated 
+
+
+_____________________________________________________________________________________________________________________________
+18 To verify that appointment can be scheduled with valid input
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+3. Enter valid date and time along with duration
+4. Click on Save button
+
+Expected Results
+Appointment must get scheduled and seen in the list
+
+__________________________________________________________________________________________________________________________
+
+19 To verify that user friendly message is shown when user tries to create appointment with past date
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+3. Enter a past date
+4. Enter time
+5. Enter duration
+6. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating date entered must be current or future date
+
+___________________________________________________________________________________________________________________________
+20 To verify that user friendly message is shown when user tries to create appointment with past time and current date
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+3. Enter a current date
+4. Enter past time
+5. Enter duration
+6. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating time entered must be future time
+
+_________________________________________________________________________________________________________________________
+
+21 To verify that appointment cannot be scheduled for an already booked time slot
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+3. Enter a date that has an appointment scheduled
+4. Enter past time that has an appointment scheduled
+5. Enter duration
+6. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating selected time slot is already booked
+
+_________________________________________________________________________________________________________________________________
+22 To verify that user friendly message is shown when improper date format is entered when scheduling an appointment
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+3. Enter an improper  date format like 2018-2-1
+4. Enter past time
+5. Enter duration
+6. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating to enter a valid date
+
+_________________________________________________________________________________________________________________________________
+23 To verify that user friendly message is shown when improper time format is entered when scheduling an appointment
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+3. Enter a valid date
+4. Enter improper time  time like -- : 05 AM ( to do deleted the hours counter value)
+5. Enter duration
+6. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating to enter a valid time
+
+_________________________________________________________________________________________________________________________________
+24 To verify that user friendly message is shown when improper duration is entered when scheduling an appointment
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+3. Enter a valid date
+4. Enter valid time
+5. Enter duration as 0
+6. Click on Save button
+
+Expected Results
+User friendly validation message must be shown indicating to enter a valid duration
+
+
+_________________________________________________________________________________________________________________________________
+
+25 To verify that user is directed to the appointment listing page when a new appointment is scheduled.
+
+Steps
+1. Add a new patient record
+2. Click on schedule appointment link
+3. Enter a valid date
+4. Enter valid time
+5. Enter  valid duration
+6. Click on Save button
+
+Expected Results
+1. Appointment must get scheduled 
+2. Appointment must be seen in schedule of the selected date
+_________________________________________________________________________________________________________________________________
